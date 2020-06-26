@@ -64,7 +64,7 @@ class NextcloudStorage:
         elif r.status_code == 998:
             print('not found')
         else:
-            print('unknown error')
+            print('unknown error (Code: %d)' % r.status_code)
 
     def main(self):
         # check if any argument is given
