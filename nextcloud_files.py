@@ -57,6 +57,8 @@ class NextcloudStorage:
             for el in self.result:
                 print(el, file=sys.stdout)
 
+        elif r.status_code == 401:
+            print('unauthorized')
         elif r.status_code == 996:
             print('server error')
         elif r.status_code == 997:
